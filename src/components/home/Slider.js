@@ -6,12 +6,10 @@ import { useRandomCategoriesQuery } from "../../store/services/categoryService";
 import Spinner from "../Spinner";
 import { useDispatch } from "react-redux";
 
-
 const Slider = () => {
   const { data, isFetching } = useRandomCategoriesQuery();
   const dispatch = useDispatch();
   console.log(data, isFetching);
-
 
   return isFetching ? (
     <div className="my-container h-[70vh] flex items-center justify-center">
@@ -30,24 +28,25 @@ const Slider = () => {
               </h1>
 
               <p className="mb-8 md:mb-10 max-w-md leading-relaxed text-gray-500 xl:text-lg">
-                This is a section of some simple filler text, also known as
-                placeholder text. It shares characteristics of real text.
+                Ultimately, style in clothing is a deeply personal choice that
+                allows individuals to express their personality, creativity, and
+                individuality through the clothes they wear.
               </p>
-            <div className="flex flex-col gap-2.5 sm:flex-row sm:justify-center lg:justify-start">
-              <Link
-                onClick={() => dispatch(toggleSearchBar())}
-                className="image-shadow inline-block rounded-lg bg-mynavy px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-mypastelblue focus-visible:ring active:bg-indigo-700 md:text-base"
-              >
-                Start now
-              </Link>
+              <div className="flex flex-col gap-2.5 sm:flex-row sm:justify-center lg:justify-start">
+                <Link
+                  onClick={() => dispatch(toggleSearchBar())}
+                  className="image-shadow inline-block rounded-lg bg-mynavy px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-mypastelblue focus-visible:ring active:bg-indigo-700 md:text-base"
+                >
+                  Start now
+                </Link>
 
-              <Link
-                to={"/cat-products/Saree"}
-                className="image-shadow inline-block rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base"
-              >
-                Take tour
-              </Link>
-            </div>
+                <Link
+                  to={"/cat-products/Saree"}
+                  className="image-shadow inline-block rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base"
+                >
+                  Take tour
+                </Link>
+              </div>
             </div>
 
             {data?.categories.length > 0 &&
@@ -83,7 +82,6 @@ const Slider = () => {
                 />
               </div>
             </div>
-
           </div>
 
           <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
@@ -181,4 +179,3 @@ const Slider = () => {
 };
 
 export default Slider;
-

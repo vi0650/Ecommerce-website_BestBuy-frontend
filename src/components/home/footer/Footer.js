@@ -1,7 +1,7 @@
 import "./Footer.css";
 import { useState } from "react";
 import { useMailsendMutation } from "../../../store/services/sendMail";
-
+import toast from 'react-hot-toast';
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -12,6 +12,7 @@ const Footer = () => {
   const submitmail = (e) => {
     e.preventDefault();
     sendMail({ email: state });
+    toast.success('Check your Email..')
   };
 
   return (
