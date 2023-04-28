@@ -1,0 +1,26 @@
+.nav {
+    @apply bg-mynavy shadow-2xl z-50;
+}
+
+.nav-li {
+    @apply ml-8;
+}
+
+.nav-link {
+    @apply text-base font-medium text-black capitalize;
+}
+
+.nav-circle {
+    @apply flex items-center justify-center w-[22px] h-[22px] rounded-full bg-indigo-600 text-xs text-white font-medium absolute top-6 right-20;
+}
+
+.image-shadow {
+    -webkit-filter: drop-shadow(5px 5px 5px #9e9393);
+    filter: drop-shadow(5px 5px 5px #635d5d);
+}
+
+.header1 {
+    position: sticky;
+    top: 0px;
+    height: 6rem;
+}

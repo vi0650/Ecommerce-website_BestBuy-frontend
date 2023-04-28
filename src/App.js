@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import Routing from "./routes/Routing"
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+
+// let docTitle = document.title;
+// window.addEventListener("blur", () => {
+//   document.title = "Bye bye!👋🙂 Come Back :(";
+// });
+// window.addEventListener("focus", () => {
+//   document.title = docTitle;
+// });
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <Routing />
   );
 }
-
 export default App;
